@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { theme } from '../theme/colors';
+import FloatingCTA from '../components/FloatingCTA';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -231,6 +232,8 @@ Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
           </p>
         </div>
       </div>
+      
+      <FloatingCTA />
     </div>
   );
 };

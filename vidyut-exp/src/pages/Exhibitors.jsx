@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { theme } from '../theme/colors';
+import FloatingCTA from '../components/FloatingCTA';
 
 const Exhibitors = () => {
   const [formData, setFormData] = useState({
@@ -191,6 +192,8 @@ Requirements: ${formData.requirements}`;
           </form>
         </div>
       </div>
+      
+      <FloatingCTA />
     </div>
   );
 };
