@@ -3,10 +3,13 @@ import { theme } from "../theme/colors";
 import Countdown from "../components/Countdown";
 import ActionButtons from "../components/ActionButtons";
 import FloatingCTA from "../components/FloatingCTA";
+import QRCode from "../components/QRCode";
 import logo from "../assets/logo/logo.jpeg";
 
 const Home = () => {
-  const expoDate = new Date(import.meta.env.VITE_EXPO_DATE || '2024-12-31T10:00:00.000Z').getTime();
+  const expoDate = new Date(
+    import.meta.env.VITE_EXPO_DATE || "2024-12-31T10:00:00.000Z"
+  ).getTime();
 
   return (
     <div className="min-h-screen">
@@ -19,9 +22,9 @@ const Home = () => {
           }}
         ></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-2">
-          <img 
-            src={logo} 
-            alt="Vidyut Expo Logo" 
+          <img
+            src={logo}
+            alt="Vidyut Expo Logo"
             className="w-40 h-40 mx-auto mb-3 rounded-full object-cover"
           />
           <h1 className="text-5xl md:text-4xl font-bold mb-4">
@@ -35,6 +38,7 @@ const Home = () => {
           <Countdown targetDate={expoDate} className="justify-center mb-4" />
 
           <ActionButtons />
+
         </div>
       </section>
 
@@ -83,8 +87,8 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>  
-      
+      </section>
+
       <FloatingCTA />
     </div>
   );
