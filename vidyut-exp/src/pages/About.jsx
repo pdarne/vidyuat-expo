@@ -1,4 +1,5 @@
 import { theme } from '../theme/colors';
+import FloatingCTA from '../components/FloatingCTA';
 
 const About = () => {
   return (
@@ -101,6 +102,8 @@ const About = () => {
           ))}
         </div>
       </div>
+      
+      <FloatingCTA />
     </div>
   );
 };
