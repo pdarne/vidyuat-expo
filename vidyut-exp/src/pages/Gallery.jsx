@@ -1,5 +1,6 @@
-
-import { useState } from "react";
+import { theme } from '../theme/colors';
+import FloatingCTA from '../components/FloatingCTA';
+import { galleryCategories } from '../data/constants';
 import content1 from "../assets/content/content-1.jpeg";
 import content2 from "../assets/content/content-2.jpeg";
 import content3 from "../assets/content/content-3.jpeg";
@@ -8,65 +9,96 @@ import content5 from "../assets/content/content-5.jpeg";
 import content6 from "../assets/content/content-6.jpeg";
 import content7 from "../assets/content/content-7.jpeg";
 import content8 from "../assets/content/content-8.jpeg";
-import GalleryHeader from "../components/GalleryHeader";
-import GalleryTabs from "../components/GalleryTabs";
-import PhotosSection from "../components/PhotosSection";
-import VideosSection from "../components/VideosSection";
-import GalleryFooter from "../components/GalleryFooter";
-import FloatingCTA from "../components/FloatingCTA";
 
 const Gallery = () => {
-  const [activeTab, setActiveTab] = useState("photos");
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const photos = [
-    { id: 4, title: "Networking & Business Meetings", url: content7, date: "18 March 2023", location: "Business Lounge" },
-    { id: 5, title: "Industry Leaders Summit", url: content3, date: "16 March 2023", location: "Conference Room 1" },
-    { id: 8, title: "Technical Workshop Sessions", url: content6, date: "18 March 2023", location: "Workshop Hall" },
-    { id: 7, title: "Closing Ceremony", url: content8, date: "18 March 2023", location: "Main Auditorium" },
-    { id: 2, title: "Product Demonstration Arena", url: content4, date: "17 March 2023", location: "Demo Zone" },
-    { id: 6, title: "Excellence Awards Ceremony", url: content5, date: "17 March 2023", location: "Main Auditorium" },
-    { id: 3, title: "Inaugural Ceremony - Vidyut Expo 2023", url: content1, date: "15 March 2023", location: "Main Auditorium" },
-    { id: 1, title: "Technology Innovation Pavilion", url: content2, date: "16 March 2023", location: "Hall A" },
-  ];
-
-  const videos = [
-    { id: 1, title: "Official Highlights - Vidyut Expo 2023", thumbnail: content5, duration: "5:30", date: "March 2023" },
-    { id: 2, title: "Ministerial Address & Policy Announcements", thumbnail: content6, duration: "18:45", date: "March 2023" },
-    { id: 3, title: "Innovation Showcase Documentary", thumbnail: content7, duration: "12:15", date: "March 2023" },
-    { id: 4, title: "Success Stories & Case Studies", thumbnail: content8, duration: "15:20", date: "March 2023" }
+  const images = [
+    { src: content1, category: 'Electrical Infrastructure', title: 'Power Distribution Systems' },
+    { src: content2, category: 'Renewable Energy', title: 'Solar Panel Installation' },
+    { src: content3, category: 'Panels & Switchgear', title: 'Control Panel Manufacturing' },
+    { src: content4, category: 'Smart Energy & IoT', title: 'Smart Grid Technology' },
+    { src: content5, category: 'Electrical Infrastructure', title: 'Transformer Installation' },
+    { src: content6, category: 'Renewable Energy', title: 'Wind Energy Solutions' },
+    { src: content7, category: 'Panels & Switchgear', title: 'Electrical Safety Equipment' },
+    { src: content8, category: 'Smart Energy & IoT', title: 'Energy Management Systems' }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        <GalleryHeader />
-        
-        <GalleryTabs 
-          activeTab={activeTab} 
-          setActiveTab={setActiveTab} 
-          tabs={[
-            { key: "photos", label: "Photographs", count: photos.length },
-            { key: "videos", label: "Video Documentation", count: videos.length },
-          ]}
-        />
+    <div className="min-h-screen py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
+            Gallery
+          </h1>
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: theme.neutral[600] }}>
+            Explore the world of electrical innovations and technologies
+          </p>
+        </div>
 
-        {activeTab === "photos" && (
-          <PhotosSection photos={photos} setSelectedImage={setSelectedImage} />
-        )}
+        {/* Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {galleryCategories.map((category, idx) => (
+            <button
+              key={idx}
+              className="px-6 py-3 rounded-full font-medium transition-all hover:scale-105"
+              style={{
+                backgroundColor: theme.primary[100],
+                color: theme.primary[700],
+                border: `2px solid ${theme.primary[300]}`
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-        {activeTab === "videos" && (
-          <VideosSection videos={videos} />
-        )}
+        {/* Image Gallery */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {images.map((image, idx) => (
+            <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={image.src} 
+                alt={image.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <span 
+                  className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-2"
+                  style={{
+                    backgroundColor: theme.secondary[100],
+                    color: theme.secondary[700]
+                  }}
+                >
+                  {image.category}
+                </span>
+                <h3 className="font-semibold" style={{ color: theme.neutral[800] }}>
+                  {image.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Video Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-center mb-8" style={{ color: theme.primary[700] }}>
+            Event Videos
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+              <span className="text-gray-600 font-medium">[Expo Highlights Video]</span>
+            </div>
+            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+              <span className="text-gray-600 font-medium">[Technical Seminars Video]</span>
+            </div>
+          </div>
+        </div>
       </div>
       
-      <GalleryFooter />
       <FloatingCTA />
     </div>
   );
-                      
-
-       
 };
 
 export default Gallery;

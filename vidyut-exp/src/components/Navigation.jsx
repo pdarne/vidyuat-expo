@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { theme } from '../theme/colors';
+import logo from '../assets/logo/navbarLogo.jpg';
 
 const Navigation = () => {
   const location = useLocation();
@@ -34,8 +35,9 @@ const Navigation = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold" style={{ color: theme.primary[600] }}>
-            Vidyut Expo
+          <Link to="/" className="flex items-center space-x-2">
+            <img src={logo} alt="Vidyut Expo Logo" className="w-10 h-10 rounded-full object-cover" />
+            <span className="text-2xl font-bold" style={{ color: theme.primary[600] }}>Vidyut Expo</span>
           </Link>
           
           {/* Desktop Navigation */}

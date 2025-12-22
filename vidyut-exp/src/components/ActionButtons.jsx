@@ -14,15 +14,7 @@ const ActionButtons = ({ className = "" }) => {
       >
         Register Now
       </button>
-      <a
-        href="/exhibitors"
-        className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 rounded-lg font-semibold border-2 border-white hover:bg-white transition-colors text-center text-sm sm:text-base"
-        style={{ color: "white" }}
-        onMouseEnter={(e) => (e.target.style.color = theme.primary[600])}
-        onMouseLeave={(e) => (e.target.style.color = "white")}
-      >
-        Book Stall
-      </a>
+     
     </div>
   );
 };

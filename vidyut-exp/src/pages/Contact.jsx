@@ -1,193 +1,125 @@
 import { theme } from '../theme/colors';
 import FloatingCTA from '../components/FloatingCTA';
+import { contactInfo } from '../data/constants';
 
 const Contact = () => {
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center mb-16" style={{ color: theme.primary[700] }}>
-          Contact Us
-        </h1>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
+            Contact Us
+          </h1>
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: theme.neutral[600] }}>
+            Get in touch with us for any queries or information
+          </p>
+        </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8" style={{ color: theme.secondary[600] }}>
-              Get in Touch
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8" style={{ color: theme.primary[600] }}>
+              Contact Information
             </h2>
             
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                  style={{ backgroundColor: theme.primary[500] }}
-                >
-                  📍
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                    Venue Address
-                  </h3>
-                  <p style={{ color: theme.neutral[600] }}>
-                    Convention Center<br/>
-                    123 Exhibition Street<br/>
-                    Tech City, TC 12345
+              <div>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
+                  📞 Phone Numbers
+                </h3>
+                {contactInfo.phones.map((phone, idx) => (
+                  <p key={idx} className="text-lg mb-2" style={{ color: theme.neutral[600] }}>
+                    <a href={`tel:${phone}`} className="hover:underline">{phone}</a>
                   </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                  style={{ backgroundColor: theme.secondary[500] }}
-                >
-                  📞
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                    Phone Numbers
-                  </h3>
-                  <p style={{ color: theme.neutral[600] }}>
-                    General Inquiries: +1 (555) 123-4567<br/>
-                    Exhibitor Support: +1 (555) 123-4568<br/>
-                    Media Relations: +1 (555) 123-4569
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                  style={{ backgroundColor: theme.accent[500] }}
-                >
-                  ✉️
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                    Email Addresses
-                  </h3>
-                  <p style={{ color: theme.neutral[600] }}>
-                    General: info@vidyutexpo.com<br/>
-                    Exhibitors: exhibitors@vidyutexpo.com<br/>
-                    Press: media@vidyutexpo.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                  style={{ backgroundColor: theme.primary[400] }}
-                >
-                  🕒
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                    Office Hours
-                  </h3>
-                  <p style={{ color: theme.neutral[600] }}>
-                    Monday - Friday: 9:00 AM - 6:00 PM<br/>
-                    Saturday: 10:00 AM - 4:00 PM<br/>
-                    Sunday: Closed
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="mt-12">
-              <h3 className="text-xl font-semibold mb-4" style={{ color: theme.neutral[800] }}>
-                Follow Us
-              </h3>
-              <div className="flex space-x-4">
-                {['Facebook', 'Twitter', 'LinkedIn', 'Instagram'].map((social, idx) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
-                    style={{ backgroundColor: theme.primary[500] }}
-                  >
-                    {social[0]}
-                  </a>
                 ))}
               </div>
-            </div>
-          </div>
-
-          {/* Map and Venue Details */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8" style={{ color: theme.secondary[600] }}>
-              Venue Details
-            </h2>
-            
-            {/* Map Placeholder */}
-            <div 
-              className="w-full h-64 rounded-lg mb-6 flex items-center justify-center text-white"
-              style={{ backgroundColor: theme.neutral[300] }}
-            >
-              <div className="text-center">
-                <div className="text-4xl mb-2">🗺️</div>
-                <p>Interactive Map</p>
-                <p className="text-sm">Click to view in Google Maps</p>
-              </div>
-            </div>
-
-            {/* Venue Information */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4" style={{ color: theme.primary[600] }}>
-                Convention Center Facilities
-              </h3>
               
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Free WiFi</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Parking Available</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Food Court</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Accessibility</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Security</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span style={{ color: theme.accent[500] }}>✓</span>
-                  <span style={{ color: theme.neutral[700] }}>Air Conditioning</span>
-                </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
+                  📧 Email
+                </h3>
+                <p className="text-lg" style={{ color: theme.neutral[600] }}>
+                  <a href={`mailto:${contactInfo.email}`} className="hover:underline">
+                    {contactInfo.email}
+                  </a>
+                </p>
               </div>
-
-              <div className="mt-6 pt-6 border-t" style={{ borderColor: theme.neutral[200] }}>
-                <h4 className="font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                  Transportation
-                </h4>
-                <p className="text-sm" style={{ color: theme.neutral[600] }}>
-                  • Metro Station: Tech Center (5 min walk)<br/>
-                  • Bus Routes: 15, 23, 45, 67<br/>
-                  • Airport: 30 minutes by taxi<br/>
-                  • Hotel Shuttle: Available from partner hotels
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
+                  📍 Location
+                </h3>
+                <p className="text-lg" style={{ color: theme.neutral[600] }}>
+                  Dr. Vasantrao Deshpande Hall Premises<br/>
+                  Civil Lines, {contactInfo.location}
                 </p>
               </div>
             </div>
           </div>
+
+          {/* Map Section */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8" style={{ color: theme.primary[600] }}>
+              Location Map
+            </h2>
+            
+            <div className="bg-gray-200 rounded-lg h-64 mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.106223768844!2d79.0621393124917!3d21.150171146791845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0c011f8b8d1%3A0xc25ca5550eb4947d!2sVasatrao%20Deshpande%20Sabhagruh%2C%20Civil%20Lines!5e0!3m2!1sen!2sin!4v1766430205017!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+                title="Dr. Vasantrao Deshpande Hall Location"
+              />
+            </div>
+            
+            <div className="text-center">
+              <button 
+                className="px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
+                style={{ backgroundColor: theme.primary[600] }}
+              >
+                Get Directions
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Emergency Contact */}
-        <div className="mt-16 bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-          <h3 className="text-xl font-semibold mb-2 text-red-800">
-            Emergency Contact
-          </h3>
-          <p className="text-red-700">
-            For urgent matters during the expo: <strong>+1 (555) 911-EXPO</strong>
-          </p>
+        {/* Quick Contact */}
+        <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-center mb-8" style={{ color: theme.primary[700] }}>
+            Quick Contact
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-4xl mb-4">📞</div>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
+                Call Us
+              </h3>
+              <p style={{ color: theme.neutral[600] }}>Available 9 AM - 6 PM</p>
+            </div>
+            
+            <div>
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
+                WhatsApp
+              </h3>
+              <p style={{ color: theme.neutral[600] }}>Quick responses</p>
+            </div>
+            
+            <div>
+              <div className="text-4xl mb-4">📧</div>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
+                Email
+              </h3>
+              <p style={{ color: theme.neutral[600] }}>24/7 support</p>
+            </div>
+          </div>
         </div>
       </div>
       

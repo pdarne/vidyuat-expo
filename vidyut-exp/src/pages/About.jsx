@@ -1,5 +1,6 @@
 import { theme } from '../theme/colors';
 import FloatingCTA from '../components/FloatingCTA';
+import { eventData, targetAudience } from '../data/constants';
 
 const About = () => {
   return (
@@ -8,98 +9,96 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
-            About Vidyut Expo
+            About {eventData.name}
           </h1>
           <p className="text-xl max-w-3xl mx-auto" style={{ color: theme.neutral[600] }}>
-            Empowering innovation and fostering technological advancement through world-class exhibitions
+            {eventData.tagline} - Empowering Central India's Electrical Industry
           </p>
         </div>
 
-        {/* Mission & Vision */}
+        {/* What is Vidyut Expo */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[600] }}>
+            What is Vidyut Expo?
+          </h2>
+          <p className="text-lg leading-relaxed mb-4" style={{ color: theme.neutral[700] }}>
+            Vidyut Expo is Central India's premier electrical exhibition, bringing together industry leaders, 
+            manufacturers, contractors, and professionals under one roof. This comprehensive platform showcases 
+            the latest innovations, technologies, and solutions in the electrical sector.
+          </p>
+          <p className="text-lg leading-relaxed" style={{ color: theme.neutral[700] }}>
+            With over 200+ exhibitors and 1000+ products on display, the expo serves as a catalyst for 
+            business growth, knowledge sharing, and technological advancement in the electrical industry.
+          </p>
+        </div>
+
+        {/* Importance & Why Central India */}
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[600] }}>
-              Our Mission
+              Importance for Electrical Industry
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: theme.neutral[700] }}>
-              To create a premier platform that brings together innovators, entrepreneurs, and technology 
-              enthusiasts to showcase cutting-edge solutions, foster collaboration, and drive technological 
-              advancement for a better future.
-            </p>
+            <ul className="space-y-3 text-lg" style={{ color: theme.neutral[700] }}>
+              <li>• Showcase latest electrical technologies and innovations</li>
+              <li>• Foster business partnerships and collaborations</li>
+              <li>• Provide platform for knowledge exchange</li>
+              <li>• Connect manufacturers with contractors and end-users</li>
+              <li>• Promote sustainable and energy-efficient solutions</li>
+            </ul>
           </div>
           
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6" style={{ color: theme.secondary[600] }}>
-              Our Vision
+              Why Central India?
             </h2>
+            <p className="text-lg leading-relaxed mb-4" style={{ color: theme.neutral[700] }}>
+              Central India, with Nagpur as its hub, is strategically positioned as the geographical center 
+              of India, making it easily accessible from all major cities.
+            </p>
             <p className="text-lg leading-relaxed" style={{ color: theme.neutral[700] }}>
-              To be the leading technology exhibition that inspires innovation, connects global communities, 
-              and shapes the future of technology by providing unparalleled opportunities for learning, 
-              networking, and business growth.
+              The region's growing industrial base, infrastructure development, and increasing demand for 
+              electrical solutions make it the perfect location for this landmark exhibition.
             </p>
           </div>
         </div>
 
-        {/* Organizer Details */}
+        {/* Who Should Attend */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: theme.primary[700] }}>
-            Meet Our Organizers
+            Who Should Attend?
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Dr. Sarah Johnson',
-                role: 'Event Director',
-                bio: '15+ years in tech industry, former CTO at major tech companies'
-              },
-              {
-                name: 'Michael Chen',
-                role: 'Operations Manager',
-                bio: 'Expert in large-scale event management and logistics coordination'
-              },
-              {
-                name: 'Emily Rodriguez',
-                role: 'Partnership Director',
-                bio: 'Specialist in building strategic partnerships and sponsor relations'
-              }
-            ].map((organizer, idx) => (
-              <div key={idx} className="text-center">
+          <div className="grid md:grid-cols-3 gap-6">
+            {targetAudience.map((audience, idx) => (
+              <div key={idx} className="text-center p-4 rounded-lg" style={{ backgroundColor: theme.neutral[50] }}>
                 <div 
-                  className="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold"
+                  className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold"
                   style={{ backgroundColor: theme.accent[400] }}
                 >
-                  {organizer.name.split(' ').map(n => n[0]).join('')}
+                  ⚡
                 </div>
-                <h3 className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
-                  {organizer.name}
+                <h3 className="text-lg font-semibold" style={{ color: theme.neutral[800] }}>
+                  {audience}
                 </h3>
-                <p className="font-medium mb-3" style={{ color: theme.primary[600] }}>
-                  {organizer.role}
-                </p>
-                <p className="text-sm" style={{ color: theme.neutral[600] }}>
-                  {organizer.bio}
-                </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { number: '500+', label: 'Exhibitors' },
-            { number: '10K+', label: 'Visitors' },
-            { number: '50+', label: 'Countries' },
-            { number: '100+', label: 'Speakers' }
-          ].map((stat, idx) => (
-            <div key={idx}>
-              <div className="text-4xl font-bold mb-2" style={{ color: theme.primary[600] }}>
-                {stat.number}
-              </div>
-              <div style={{ color: theme.neutral[600] }}>{stat.label}</div>
-            </div>
-          ))}
+        {/* Organizer Info */}
+        <div className="text-center bg-gray-100 rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[700] }}>
+            Organized By
+          </h2>
+          <p className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
+            {eventData.organizer}
+          </p>
+          <p className="text-lg mb-4" style={{ color: theme.neutral[600] }}>
+            In Association With: {eventData.association}
+          </p>
+          <p className="text-md" style={{ color: theme.neutral[500] }}>
+            {eventData.established}
+          </p>
         </div>
       </div>
       

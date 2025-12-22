@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { theme } from '../theme/colors';
 import FloatingCTA from '../components/FloatingCTA';
+import { interestOptions } from '../data/constants';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +16,6 @@ const Register = () => {
     newsletter: false
   });
 
-  const interestOptions = [
-    'Technology & Software',
-    'Electronics & Hardware',
-    'Renewable Energy',
-    'Automotive',
-    'Healthcare & Medical',
-    'Education & Training',
-    'Manufacturing',
-    'Startups & Innovation'
-  ];
-
   const handleInterestChange = (interest) => {
     setFormData(prev => ({
       ...prev,
@@ -33,6 +23,11 @@ const Register = () => {
         ? prev.interests.filter(i => i !== interest)
         : [...prev.interests, interest]
     }));
+  };
+
+  const generateQRCode = (data) => {
+    const qrData = `Name: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\nPhone: ${data.phone}\nCompany: ${data.company}\nDesignation: ${data.designation}\nEvent: Vidyut Expo 2026`;
+    return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
   };
 
   const handleSubmit = (e) => {
@@ -49,8 +44,25 @@ Interests: ${formData.interests.join(', ')}
 Dietary Restrictions: ${formData.dietaryRestrictions}
 Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
     
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919823122306?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+    
+    // Generate QR Code Entry Pass
+    const qrCodeUrl = generateQRCode(formData);
+    const qrWindow = window.open('', '_blank', 'width=300,height=350');
+    qrWindow.document.write(`
+      <html>
+        <head><title>Entry Pass - Vidyut Expo 2026</title></head>
+        <body style="text-align:center; font-family:Arial; padding:20px;">
+          <h3>⚡ Vidyut Expo 2026</h3>
+          <h4>Entry Pass</h4>
+          <img src="${qrCodeUrl}" alt="QR Code Entry Pass" />
+          <p><strong>${formData.firstName} ${formData.lastName}</strong></p>
+          <p>${formData.company}</p>
+          <p>Show this QR code at entry</p>
+        </body>
+      </html>
+    `);
   };
 
   return (
@@ -58,10 +70,10 @@ Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
-            Register for Vidyut Expo 2024
+            Register for Vidyut Expo 2026
           </h1>
           <p className="text-xl" style={{ color: theme.neutral[600] }}>
-            Join thousands of innovators, entrepreneurs, and tech enthusiasts
+            Join thousands of electrical industry professionals and innovators
           </p>
         </div>
 
@@ -69,8 +81,8 @@ Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {[
             { icon: '🎫', title: 'Free Entry', desc: 'Complete access to all exhibition areas' },
-            { icon: '🍽️', title: 'Complimentary Lunch', desc: 'Networking lunch with fellow attendees' },
-            { icon: '📚', title: 'Resource Kit', desc: 'Digital resources and expo materials' }
+            { icon: '🍽️', title: 'Networking Lunch', desc: 'Connect with 300+ electrical contractors' },
+            { icon: '📚', title: 'Technical Seminars', desc: 'Expert sessions on latest electrical trends' }
           ].map((benefit, idx) => (
             <div key={idx} className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-4xl mb-4">{benefit.icon}</div>
@@ -217,7 +229,7 @@ Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
               className="w-full py-4 rounded-lg font-semibold text-white text-lg transition-transform hover:scale-105"
               style={{ backgroundColor: theme.primary[600] }}
             >
-              Register via WhatsApp
+              Register & Get QR Entry Pass
             </button>
           </form>
         </div>
@@ -226,8 +238,8 @@ Newsletter: ${formData.newsletter ? 'Yes' : 'No'}`;
         <div className="text-center mt-8">
           <p style={{ color: theme.neutral[600] }}>
             Need help with registration? Contact us at{' '}
-            <a href="mailto:register@vidyutexpo.com" style={{ color: theme.primary[600] }}>
-              register@vidyutexpo.com
+            <a href="mailto:vidyutexpo23@gmail.com" style={{ color: theme.primary[600] }}>
+              vidyutexpo23@gmail.com
             </a>
           </p>
         </div>
