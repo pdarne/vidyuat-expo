@@ -39,10 +39,10 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-10 px-4">
+        <div className="max-w-4xl mx-auto">
           <h2
-            className="text-4xl font-bold text-center mb-16"
+            className="text-4xl font-bold text-center mb-8"
             style={{ color: theme.primary[700] }}
           >
             Why Attend Vidyut Expo?
