@@ -71,14 +71,15 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {targetAudience.map((audience, idx) => (
               <div key={idx} className="text-center p-4 rounded-lg" style={{ backgroundColor: theme.neutral[50] }}>
-                <div 
-                  className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold"
-                  style={{ backgroundColor: theme.accent[400] }}
-                >
-                  ⚡
-                </div>
+                <video 
+                  src={audience.icon} 
+                  autoPlay
+                  loop
+                  muted
+                  className="w-16 h-16 mx-auto mb-4 object-cover rounded-lg"
+                />
                 <h3 className="text-lg font-semibold" style={{ color: theme.neutral[800] }}>
-                  {audience}
+                  {audience.name}
                 </h3>
               </div>
             ))}

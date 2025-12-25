@@ -8,8 +8,7 @@ const FloatingCTA = () => {
   return (
     <button
       onClick={handleRegisterClick}
-      className="fixed bottom-6 right-6 px-6 py-3 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 z-50"
-      style={{ backgroundColor: theme.accent[500] }}
+      className="btn-primary px-5 py-4 text-white font-semibold rounded-xl shadow-lg hover-lift transition-all duration-300 fixed bottom-6 right-9 z-50"
     >
       Register Now
     </button>

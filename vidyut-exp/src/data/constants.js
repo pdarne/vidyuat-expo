@@ -19,17 +19,18 @@ export const highlights = [
 ];
 
 export const exhibitors = [
-  { name: "Orient Electric", logo: "https://logos-world.net/wp-content/uploads/2021/02/Orient-Electric-Logo.png" },
-  { name: "JDS Group", logo: "https://via.placeholder.com/200x80/1e3c72/ffffff?text=JDS+Group" },
-  { name: "L&T – SUFIN", logo: "https://logos-world.net/wp-content/uploads/2020/11/Larsen-Toubro-Logo.png" },
-  { name: "Jaquar", logo: "https://logos-world.net/wp-content/uploads/2021/02/Jaquar-Logo.png" },
-  { name: "Havells", logo: "https://logos-world.net/wp-content/uploads/2021/02/Havells-Logo.png" },
-  { name: "Polycab", logo: "https://logos-world.net/wp-content/uploads/2021/02/Polycab-Logo.png" },
-  { name: "Fairdeal Cable", logo: "https://via.placeholder.com/200x80/1e3c72/ffffff?text=Fairdeal+Cable" },
-  { name: "Tesla Transformers", logo: "https://via.placeholder.com/200x80/1e3c72/ffffff?text=Tesla+Transformers" },
-  { name: "Bajaj", logo: "https://logos-world.net/wp-content/uploads/2020/11/Bajaj-Logo.png" },
-  { name: "Philips", logo: "https://logos-world.net/wp-content/uploads/2020/04/Philips-Logo.png" }
+  { name: "Orient Electric", logo: "/logos/orient-electric.jpg" },
+  { name: "Polycab", logo: "/logos/polycab.png" },
+  { name: "Jaquar", logo: "/logos/jaquar.png" },
+  { name: "Havells", logo: "/logos/havells.png" },
+  { name: "Bajaj", logo: "/logos/bajaj.png" },
+  { name: "L&T – SUFIN", logo: "/logos/L&T.jpeg"},
+   { name: "Polycab",  logo: "/logos/polycab.png"},
+  { name: "Fairdeal Cable", logo: "/logos/Fairdeal_Cable.jpeg"},
+  { name: "Tesla Transformers",  logo: "/logos/Tesla.jpeg"},
+  { name: "JDS Group", logo: "/logos/jds.jpg"},
 ];
+
 
 export const contactInfo = {
   phones: ["9823122306", "7507771111", "9423103209"],
@@ -45,12 +46,12 @@ export const galleryCategories = [
 ];
 
 export const targetAudience = [
-  "Electrical contractors",
-  "Manufacturers", 
-  "Engineers",
-  "Startups",
-  "Students",
-  "Government bodies"
+  { name: "Electrical contractors", icon: "/icons/contractor.mp4", video: "/icons/contractor.mp4" },
+  { name: "Manufacturers", icon: "/icons/manufacturer.mp4", video: "/icons/manufacturer.mp4" },
+  { name: "Engineers", icon: "/icons/engineer.mp4", video: "/icons/engineer.mp4" },
+  { name: "Startups", icon: "/icons/startup.mp4", video: "/icons/startup.mp4" },
+  { name: "Students", icon: "/icons/student.mp4", video: "/icons/student.mp4" },
+  { name: "Government bodies", icon: "/icons/government.mp4", video: "/icons/government.mp4" }
 ];
 
 export const interestOptions = [

@@ -2,22 +2,16 @@ import { theme } from '../theme/colors';
 
 const ExhibitorCard = ({ exhibitor }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-      {exhibitor.logo.endsWith('.svg') || exhibitor.logo.includes('orient') ? (
-        <img 
-          src={exhibitor.logo} 
-          alt={exhibitor.name}
-          className="w-20 h-20 mx-auto mb-4 object-contain"
-        />
-      ) : (
-        <div 
-          className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold"
-          style={{ backgroundColor: theme.primary[500] }}
-        >
-          {exhibitor.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
-        </div>
-      )}
-      <h3 className="text-lg font-semibold" style={{ color: theme.neutral[800] }}>
+    <div 
+      className="text-center p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300"
+      style={{ backgroundColor: '#FFFFFF', border: '1px solid #AAC4F5' }}
+    >
+      <img 
+        src={exhibitor.logo} 
+        alt={exhibitor.name}
+        className="w-16 h-16 mx-auto mb-4 object-contain"
+      />
+      <h3 className="text-lg font-semibold" style={{ color: '#0F172A' }}>
         {exhibitor.name}
       </h3>
     </div>

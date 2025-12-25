@@ -32,26 +32,28 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="card-glass sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Vidyut Expo Logo" className="w-10 h-10 rounded-full object-cover" />
-            <span className="text-2xl font-bold" style={{ color: theme.primary[600] }}>Vidyut Expo</span>
+          <Link to="/" className="flex items-center space-x-2 hover-lift rounded-xl p-2">
+            <img src={logo} alt="Vidyut Expo Logo" className="w-15 h-10 rounded-full object-cover" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-sky-400 bg-clip-text text-transparent">
+              Vidyut Expo
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex space-x-8">
+            <div className="flex space-x-2">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  style={{
-                    backgroundColor: location.pathname === item.path ? theme.primary[600] : 'transparent',
-                    color: location.pathname === item.path ? 'white' : theme.neutral[700]
-                  }}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover-lift ${
+                    location.pathname === item.path 
+                      ? 'bg-gradient-to-r from-indigo-600 to-sky-400 text-white shadow-lg' 
+                      : 'text-slate-700 hover:bg-indigo-50'
+                  }`}
                 >
                   {item.label}
                 </Link>

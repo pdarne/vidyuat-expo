@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-slate-50">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />

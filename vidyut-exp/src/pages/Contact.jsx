@@ -78,8 +78,9 @@ const Contact = () => {
               />
             </div>
             
-            <div className="text-center">
+            <div className="text-center p-8">
               <button 
+                onClick={() => window.open('https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRiPAtIBBzM3MmowajeoAgCwAgA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KTPOgBr2wNQ7MZycPy4XZb9C&daddr=Amdar+Niwas,+Temple+Rd,+Civil+Lines,+Nagpur,+Maharashtra+440001', '_blank')}
                 className="px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
                 style={{ backgroundColor: theme.primary[600] }}
               >
