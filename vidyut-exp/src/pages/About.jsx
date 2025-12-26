@@ -4,10 +4,10 @@ import { eventData, targetAudience } from '../data/constants';
 
 const About = () => {
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
             About {eventData.name}
           </h1>
@@ -21,7 +21,7 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[600] }}>
             What is Vidyut Expo?
           </h2>
-          <p className="text-lg leading-relaxed mb-4" style={{ color: theme.neutral[700] }}>
+          <p className="text-lg leading-relaxed mb-2" style={{ color: theme.neutral[700] }}>
             Vidyut Expo is Central India's premier electrical exhibition, bringing together industry leaders, 
             manufacturers, contractors, and professionals under one roof. This comprehensive platform showcases 
             the latest innovations, technologies, and solutions in the electrical sector.
@@ -33,7 +33,7 @@ const About = () => {
         </div>
 
         {/* Importance & Why Central India */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[600] }}>
               Importance for Electrical Industry
@@ -64,7 +64,7 @@ const About = () => {
 
         {/* Who Should Attend */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: theme.primary[700] }}>
+          <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: theme.primary[700] }}>
             Who Should Attend?
           </h2>
           

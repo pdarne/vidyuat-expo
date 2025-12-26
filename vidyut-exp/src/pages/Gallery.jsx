@@ -1,6 +1,6 @@
-import { theme } from '../theme/colors';
-import FloatingCTA from '../components/FloatingCTA';
-import { galleryCategories } from '../data/constants';
+import { theme } from "../theme/colors";
+import FloatingCTA from "../components/FloatingCTA";
+import { galleryCategories } from "../data/constants";
 import content1 from "../assets/content/content-1.jpeg";
 import content2 from "../assets/content/content-2.jpeg";
 import content3 from "../assets/content/content-3.jpeg";
@@ -12,90 +12,153 @@ import content8 from "../assets/content/content-8.jpeg";
 
 const Gallery = () => {
   const images = [
-    { src: content1, category: 'Electrical Infrastructure', title: 'Power Distribution Systems' },
-    { src: content2, category: 'Renewable Energy', title: 'Solar Panel Installation' },
-    { src: content3, category: 'Panels & Switchgear', title: 'Control Panel Manufacturing' },
-    { src: content4, category: 'Smart Energy & IoT', title: 'Smart Grid Technology' },
-    { src: content5, category: 'Electrical Infrastructure', title: 'Transformer Installation' },
-    { src: content6, category: 'Renewable Energy', title: 'Wind Energy Solutions' },
-    { src: content7, category: 'Panels & Switchgear', title: 'Electrical Safety Equipment' },
-    { src: content8, category: 'Smart Energy & IoT', title: 'Energy Management Systems' }
+    {
+      src: content1,
+      category: "Electrical Infrastructure",
+      title: "Power Distribution Systems",
+    },
+    {
+      src: content2,
+      category: "Renewable Energy",
+      title: "Solar Panel Installation",
+    },
+    {
+      src: content3,
+      category: "Panels & Switchgear",
+      title: "Control Panel Manufacturing",
+    },
+    {
+      src: content4,
+      category: "Smart Energy & IoT",
+      title: "Smart Grid Technology",
+    },
+    {
+      src: content5,
+      category: "Electrical Infrastructure",
+      title: "Transformer Installation",
+    },
+    {
+      src: content6,
+      category: "Renewable Energy",
+      title: "Wind Energy Solutions",
+    },
+    {
+      src: content7,
+      category: "Panels & Switchgear",
+      title: "Electrical Safety Equipment",
+    },
+    {
+      src: content8,
+      category: "Smart Energy & IoT",
+      title: "Energy Management Systems",
+    },
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen py-10 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
+        <div className="text-center mb-4">
+          <h1
+            className="text-5xl font-bold mb-2"
+            style={{ color: theme.primary[700] }}
+          >
             Gallery
           </h1>
-          <p className="text-xl max-w-3xl mx-auto" style={{ color: theme.neutral[600] }}>
+          <p
+            className="text-xl max-w-3xl mx-auto"
+            style={{ color: theme.neutral[600] }}
+          >
             Explore the world of electrical innovations and technologies
           </p>
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8 md:mb-10 px-2">
           {galleryCategories.map((category, idx) => (
             <button
               key={idx}
-              className="px-6 py-3 rounded-full font-medium transition-all hover:scale-105"
+              className="
+        px-2 py-1
+        sm:px-3 sm:py-2
+        md:px-4 md:py-2
+        lg:px-6 lg:py-3
+        rounded-full
+        font-medium
+        transition-all
+        hover:scale-105
+        text-xs sm:text-sm md:text-base
+        whitespace-nowrap
+        w-60
+      "
               style={{
                 backgroundColor: theme.primary[100],
                 color: theme.primary[700],
-                border: `2px solid ${theme.primary[300]}`
+                border: `1px solid ${theme.primary[300]}`,
               }}
             >
               {category}
             </button>
           ))}
         </div>
+      </div>
 
-        {/* Image Gallery */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {images.map((image, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src={image.src} 
-                alt={image.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <span 
-                  className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-2"
-                  style={{
-                    backgroundColor: theme.secondary[100],
-                    color: theme.secondary[700]
-                  }}
-                >
-                  {image.category}
-                </span>
-                <h3 className="font-semibold" style={{ color: theme.neutral[800] }}>
-                  {image.title}
-                </h3>
-              </div>
+      {/* Image Gallery */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {images.map((image, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src={image.src}
+              alt={image.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <span
+                className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-2"
+                style={{
+                  backgroundColor: theme.secondary[100],
+                  color: theme.secondary[700],
+                }}
+              >
+                {image.category}
+              </span>
+              <h3
+                className="font-semibold"
+                style={{ color: theme.neutral[800] }}
+              >
+                {image.title}
+              </h3>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
-        {/* Video Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center mb-8" style={{ color: theme.primary[700] }}>
-            Event Videos
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-              <span className="text-gray-600 font-medium">[Expo Highlights Video]</span>
-            </div>
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-              <span className="text-gray-600 font-medium">[Technical Seminars Video]</span>
-            </div>
+      {/* Video Section */}
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <h2
+          className="text-3xl font-bold text-center mb-8"
+          style={{ color: theme.primary[700] }}
+        >
+          Event Videos
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+            <span className="text-gray-600 font-medium">
+              [Expo Highlights Video]
+            </span>
+          </div>
+          <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+            <span className="text-gray-600 font-medium">
+              [Technical Seminars Video]
+            </span>
           </div>
         </div>
       </div>
-      
+
       <FloatingCTA />
     </div>
   );

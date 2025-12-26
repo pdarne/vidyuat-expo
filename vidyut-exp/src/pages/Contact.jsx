@@ -4,11 +4,11 @@ import { contactInfo } from '../data/constants';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen py-3 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary[700] }}>
+        <div className="text-center mb-8">
+          <h1 className="text-5xl font-bold mb-2" style={{ color: theme.primary[700] }}>
             Contact Us
           </h1>
           <p className="text-xl max-w-3xl mx-auto" style={{ color: theme.neutral[600] }}>
@@ -23,7 +23,7 @@ const Contact = () => {
               Contact Information
             </h2>
             
-            <div className="space-y-6">
+            <div className="space-y-3">
               <div>
                 <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
                   📞 Phone Numbers
@@ -59,12 +59,12 @@ const Contact = () => {
           </div>
 
           {/* Map Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: theme.primary[600] }}>
+          <div className="bg-white rounded-lg shadow-lg p-4">
+            <h2 className="text-3xl font-bold mb-4" style={{ color: theme.primary[600] }}>
               Location Map
             </h2>
             
-            <div className="bg-gray-200 rounded-lg h-64 mb-6">
+            <div className="bg-gray-200 rounded-lg h-64 mb-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.106223768844!2d79.0621393124917!3d21.150171146791845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0c011f8b8d1%3A0xc25ca5550eb4947d!2sVasatrao%20Deshpande%20Sabhagruh%2C%20Civil%20Lines!5e0!3m2!1sen!2sin!4v1766430205017!5m2!1sen!2sin"
                 width="100%"
@@ -91,7 +91,7 @@ const Contact = () => {
         </div>
 
         {/* Quick Contact */}
-        <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
+        <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-bold text-center mb-8" style={{ color: theme.primary[700] }}>
             Quick Contact
           </h2>

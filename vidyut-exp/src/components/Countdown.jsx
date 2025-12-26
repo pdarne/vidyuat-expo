@@ -27,13 +27,13 @@ const Countdown = ({ targetDate, className = "" }) => {
   }, [targetDate]);
 
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div className={`flex gap-2 sm:gap-3 md:gap-4 ${className}`}>
       {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className="card-glass rounded-2xl px-6 py-4 text-center hover-lift transition-all duration-300">
-          <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">
+        <div key={unit} className="card-glass rounded-lg sm:rounded-xl md:rounded-2xl px-2 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 text-center hover-lift transition-all duration-300">
+          <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-1">
             {String(value).padStart(2, '0')}
           </div>
-          <div className="text-sm uppercase text-slate-500 font-medium">
+          <div className="text-xs sm:text-sm uppercase text-slate-500 font-medium">
             {unit}
           </div>
         </div>
