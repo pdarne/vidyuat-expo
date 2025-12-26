@@ -11,6 +11,8 @@ import {
   highlights,
   exhibitors,
   targetAudience,
+  contactInfo,
+  majorParticipants,
 } from "../data/constants";
 import logo from "../assets/logo/logo.jpeg";
 import nitin_gadkari from "../assets/logo/nitin_gadkari.webp";
@@ -188,9 +190,36 @@ const Home = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 text-slate-800">
             Our Exhibitors
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+           <div className="flex flex-wrap justify-center gap-5">
             {exhibitors.slice(0, 10).map((exhibitor, idx) => (
               <ExhibitorCard key={idx} exhibitor={exhibitor} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Major Participants */}
+      <section className="py-12 sm:py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 text-slate-800">
+            Major Participants
+          </h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {majorParticipants.map((participant, idx) => (
+              <div
+                key={idx}
+                className="text-center p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', border: '1px solid #AAC4F5', minWidth: '150px' }}
+              >
+                <img 
+                  src={participant.logo} 
+                  alt={participant.name}
+                  className="w-16 h-16 mx-auto mb-4 object-contain"
+                />
+                <h3 className="text-xl font-bold" style={{ color: '#0F172A' }}>
+                  {participant.name}
+                </h3>
+              </div>
             ))}
           </div>
         </div>
@@ -265,7 +294,7 @@ const Home = () => {
           >
             Event Highlights
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {highlights.map((highlight, idx) => (
               <div
                 key={idx}
@@ -295,13 +324,22 @@ const Home = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-slate-800">
             Get In Touch
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="card-glass p-4 sm:p-6 rounded-xl hover-lift">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📞</div>
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-slate-800">
                 Call Us
               </h3>
-              <p className="text-sm sm:text-base text-slate-600">9823122306</p>
+              <div>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
+                  📞 Phone Numbers
+                </h3>
+                {contactInfo.phones.map((phone, idx) => (
+                  //<p key={idx} className="text-lg mb-2" style={{ color: theme.neutral[600] }}>
+                    <a href={`tel:${phone}`} className="hover:underline">{phone} </a>
+                 // </p>
+                ))}
+              </div>
             </div>
             <div className="card-glass p-4 sm:p-6 rounded-xl hover-lift">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>

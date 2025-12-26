@@ -11,17 +11,16 @@ export const eventData = {
 };
 
 export const highlights = [
-  "200+ Exhibitors",
+  "125+ Exhibitors",
   "1000+ Products", 
-  "Technical Seminars & Expert Sessions",
-  "Latest Electrical Trends",
-  "Networking with 300+ Electrical Contractors"
+  "20000+ Visitors", 
+  
 ];
 
 export const exhibitors = [
   { name: "Orient Electric", logo: "/logos/orient-electric.jpg" },
   { name: "Polycab", logo: "/logos/polycab.png" },
-  { name: "Jaquar", logo: "/logos/jaquar.png" },
+  { name: "Jaquar", logo: "/logos/jaquar.jpeg" },
   { name: "Havells", logo: "/logos/havells.png" },
   { name: "Bajaj", logo: "/logos/bajaj.png" },
   { name: "L&T – SUFIN", logo: "/logos/L&T.jpeg"},
@@ -52,6 +51,13 @@ export const targetAudience = [
   { name: "Startups", icon: "/icons/startup.mp4", video: "/icons/startup.mp4" },
   { name: "Students", icon: "/icons/student.mp4", video: "/icons/student.mp4" },
   { name: "Government bodies", icon: "/icons/government.mp4", video: "/icons/government.mp4" }
+];
+
+export const majorParticipants = [
+  { name: 'ABB', logo: "/logos/abb.png"},
+  { name: 'HPL', logo: "/logos/hpl.jpg" },
+  { name: 'C&S', logo: "/logos/c&s.png" },
+  { name: 'LUCI', logo: "/logos/lucy.png" }
 ];
 
 export const interestOptions = [

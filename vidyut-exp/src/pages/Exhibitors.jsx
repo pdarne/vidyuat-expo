@@ -1,7 +1,7 @@
 import { theme } from '../theme/colors';
 import FloatingCTA from '../components/FloatingCTA';
 import ExhibitorCard from '../components/ExhibitorCard';
-import { exhibitors } from '../data/constants';
+import { exhibitors, majorParticipants } from '../data/constants';
 
 const Exhibitors = () => {
   return (
@@ -17,10 +17,12 @@ const Exhibitors = () => {
           </p>
         </div>
 
-        {/* Major Participants */}
+       
+
+        {/* All Exhibitors */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.secondary[600] }}>
-            Major Participants
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.primary[700] }}>
+            All Exhibitors
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -28,6 +30,33 @@ const Exhibitors = () => {
               <ExhibitorCard key={idx} exhibitor={exhibitor} />
             ))}
           </div>
+        </div>
+
+         {/* Major Participants */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.secondary[600] }}>
+            Major Participants
+          </h2>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            {majorParticipants.map((participant, idx) => (
+              <div
+                key={idx}
+                className="text-center p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', border: '1px solid #AAC4F5', minWidth: '150px' }}
+              >
+                <img 
+                  src={participant.logo} 
+                  alt={participant.name}
+                  className="w-16 h-16 mx-auto mb-4 object-contain"
+                />
+                <h3 className="text-xl font-bold" style={{ color: '#0F172A' }}>
+                  {participant.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+          
         </div>
 
         {/* Categories */}

@@ -28,6 +28,7 @@ const Navigation = () => {
     { path: '/about', label: 'About' },
     { path: '/exhibitors', label: 'Exhibitors' },
     { path: '/gallery', label: 'Gallery' },
+    { path: '/committee', label: 'Committee' },
     { path: '/contact', label: 'Contact' }
   ];
 
