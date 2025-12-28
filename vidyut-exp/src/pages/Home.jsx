@@ -16,6 +16,8 @@ import {
 } from "../data/constants";
 import logo from "../assets/logo/logo.jpeg";
 import nitin_gadkari from "../assets/logo/nitin_gadkari.webp";
+import EventHighlight from "../components/EventHighlight";
+import GetInTouch from "../components/GetInTouch";
 
 const Home = () => {
   const expoDate = new Date(
@@ -190,7 +192,7 @@ const Home = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 text-slate-800">
             Our Exhibitors
           </h2>
-           <div className="flex flex-wrap justify-center gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {exhibitors.slice(0, 10).map((exhibitor, idx) => (
               <ExhibitorCard key={idx} exhibitor={exhibitor} />
             ))}
@@ -209,14 +211,18 @@ const Home = () => {
               <div
                 key={idx}
                 className="text-center p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', border: '1px solid #AAC4F5', minWidth: '150px' }}
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid #AAC4F5",
+                  minWidth: "150px",
+                }}
               >
-                <img 
-                  src={participant.logo} 
+                <img
+                  src={participant.logo}
                   alt={participant.name}
                   className="w-16 h-16 mx-auto mb-4 object-contain"
                 />
-                <h3 className="text-xl font-bold" style={{ color: '#0F172A' }}>
+                <h3 className="text-xl font-bold" style={{ color: "#0F172A" }}>
                   {participant.name}
                 </h3>
               </div>
@@ -240,8 +246,8 @@ const Home = () => {
                 style={{
                   backgroundColor: "#FFFFFF",
                   border: "1px solid #AAC4F5",
-                  width:230,
-                  minWidth:150
+                  width: 230,
+                  minWidth: 150,
                 }}
               >
                 <video
@@ -258,7 +264,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          
+
           {/* <div className="flex justify-center mt-4 sm:mt-6">
             <div className="max-w-xs">
               <div
@@ -286,80 +292,10 @@ const Home = () => {
       </section>
 
       {/* Event Highlights */}
-      <section className="py-8 sm:py-10 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8"
-            style={{ color: theme.primary[700] }}
-          >
-            Event Highlights
-          </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {highlights.map((highlight, idx) => (
-              <div
-                key={idx}
-                className="text-center p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-white"
-              >
-                <div
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center text-white text-lg sm:text-2xl font-bold"
-                  style={{ backgroundColor: theme.secondary[500] }}
-                >
-                  ⚡
-                </div>
-                <h3
-                  className="text-sm sm:text-base lg:text-lg font-semibold"
-                  style={{ color: theme.neutral[800] }}
-                >
-                  {highlight}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <EventHighlight highlights={highlights} />
 
       {/* Contact Preview */}
-      <section className="py-12 sm:py-16 px-4 bg-slate-100">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-slate-800">
-            Get In Touch
-          </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="card-glass p-4 sm:p-6 rounded-xl hover-lift">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📞</div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-slate-800">
-                Call Us
-              </h3>
-              <div>
-                <h3 className="text-xl font-semibold mb-3" style={{ color: theme.neutral[800] }}>
-                  📞 Phone Numbers
-                </h3>
-                {contactInfo.phones.map((phone, idx) => (
-                  //<p key={idx} className="text-lg mb-2" style={{ color: theme.neutral[600] }}>
-                    <a href={`tel:${phone}`} className="hover:underline">{phone} </a>
-                 // </p>
-                ))}
-              </div>
-            </div>
-            <div className="card-glass p-4 sm:p-6 rounded-xl hover-lift">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-slate-800">
-                Email
-              </h3>
-              <p className="text-sm sm:text-base text-slate-600 break-all">
-                vidyutexpo23@gmail.com
-              </p>
-            </div>
-            <div className="card-glass p-4 sm:p-6 rounded-xl hover-lift sm:col-span-2 lg:col-span-1">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📍</div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-slate-800">
-                Location
-              </h3>
-              <p className="text-sm sm:text-base text-slate-600">Nagpur</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouch contactInfo={contactInfo} />
 
       <FloatingCTA />
     </div>
