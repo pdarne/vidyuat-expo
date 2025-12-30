@@ -53,66 +53,65 @@ const Committee = () => {
         </div>
       </div>
 
-      {/* Advisory Committee */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600">
-            <h3 className="font-bold text-blue-800 text-xl mb-4 text-center">Advisory Committee</h3>
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">ASHOK KRIPLANI</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">HEMANT DOSHI</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">RAJU HARDAS</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">ASHOK TIJARE</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">RAJA GOYANKA</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">DHARAMSINGH THETTY</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">KRISHNAJI LUTE</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">SANJAY CHOPDE</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">KAILASH ROTKAR</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">BAIJU HARDAS</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">ANIL CHANEKAR</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">PRADEEP DESHMUKH</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">SUBHASH GIRADKAR</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">FATTECHAND AWADHIYA</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-md text-center">
-                <p className="text-sm font-medium text-slate-700">NARENDRA PAHADE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content Grid */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Committee Structure</h2>
+          
+          {/* Advisory Committee - Full Width */}
+          <div className="mb-12">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600">
+              <h3 className="font-bold text-blue-800 text-xl mb-4 text-center">Advisory Committee</h3>
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-3">
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">ASHOK KRIPLANI</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">HEMANT DOSHI</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">RAJU HARDAS</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">ASHOK TIJARE</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">RAJA GOYANKA</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">DHARAMSINGH THETTY</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">KRISHNAJI LUTE</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">SANJAY CHOPDE</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">KAILASH ROTKAR</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">BAIJU HARDAS</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">ANIL CHANEKAR</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">PRADEEP DESHMUKH</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">SUBHASH GIRADKAR</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">FATTECHAND AWADHIYA</p>
+                </div>
+                <div className="bg-blue-50 p-3 rounded-md text-center">
+                  <p className="text-sm font-medium text-slate-700">NARENDRA PAHADE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Column 1 */}
