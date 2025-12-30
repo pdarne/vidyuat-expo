@@ -53,6 +53,30 @@ const Committee = () => {
         </div>
       </div>
 
+      {/* Advisory Committee */}
+      <div className="max-w-6xl mx-auto px-4 py-8 bg-white">
+        <div className="bg-white p-4 border-l-4 border-blue-600">
+          <h3 className="font-bold text-blue-800 text-lg mb-2">Advisory Committee</h3>
+          <div className="text-sm space-y-0.5">
+            <p>ASHOK KRIPLANI</p>
+            <p>HEMANT DOSHI</p>
+            <p>RAJU HARDAS</p>
+            <p>ASHOK TIJARE</p>
+            <p>RAJA GOYANKA</p>
+            <p>DHARAMSINGH THETTY</p>
+            <p>KRISHNAJI LUTE</p>
+            <p>SANJAY CHOPDE</p>
+            <p>KAILASH ROTKAR</p>
+            <p>BAIJU HARDAS</p>
+            <p>ANIL CHANEKAR</p>
+            <p>PRADEEP DESHMUKH</p>
+            <p>SUBHASH GIRADKAR</p>
+            <p>FATTECHAND AWADHIYA</p>
+            <p>NARENDRA PAHADE</p>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content Grid */}
       <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
         <div className="grid md:grid-cols-3 gap-8">
@@ -71,16 +95,30 @@ const Committee = () => {
               </div>
             </div>
 
-            {/* Account Committee */}
+            {/* Invitation & P.R.O Committee */}
             <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Account Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>HEMRAJ PUNEKAR</p>
-                <p>ASHOK PARAD</p>
+              <h3 className="font-bold text-blue-800 text-lg mb-2">Invitation & P.R.O Committee</h3>
+              <div className="text-sm space-y-0.5">
+                <p>GOVIND DEHEDKAR</p>
+                <p>RAVINDRA DESHMUKH</p>
+                <p>ANIL MANAPURE</p>
+                <p>ANAND MAHAJAN</p>
               </div>
+            </div>
+
+            {/* Registration Committee */}
+            <div className="bg-white p-4 border-l-4 border-blue-600">
+              <h3 className="font-bold text-blue-800 text-lg mb-2">Registration Committee</h3>
+              <p className="font-semibold mb-1">Head: NILKANTH JAISWAL</p>
               <p className="font-semibold mb-1">Members:</p>
-              <p className="text-sm">RAJESH PANJWANI</p>
+              <div className="text-sm space-y-0.5">
+                <p>SANJAY AGRAWAL</p>
+                <p>NITIN NAMJOSHI</p>
+                <p>AMIT BADKI</p>
+                <p>SANJAY SAWANKAR</p>
+                <p>RAHUL DHORE</p>
+                <p>OM ULHE</p>
+              </div>
             </div>
 
             {/* Catering Committee */}
@@ -97,7 +135,10 @@ const Committee = () => {
                 <p>VISHWANATH KUMBHALKAR</p>
               </div>
             </div>
+          </div>
 
+          {/* Column 2 */}
+          <div className="space-y-6">
             {/* Transport & Accommodation Committee */}
             <div className="bg-white p-4 border-l-4 border-blue-600">
               <h3 className="font-bold text-blue-800 text-lg mb-2">Transport & Accommodation Committee</h3>
@@ -112,77 +153,31 @@ const Committee = () => {
                 <p>MANGESH BANTE</p>
               </div>
             </div>
-          </div>
 
-          {/* Column 2 */}
-          <div className="space-y-6">
             {/* Technical Seminar Committee */}
             <div className="bg-white p-4 border-l-4 border-blue-600">
               <h3 className="font-bold text-blue-800 text-lg mb-2">Technical Seminar Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>NITIN KHIRWADKAR</p>
-              </div>
-              <p className="font-semibold mb-1">Members:</p>
               <div className="text-sm space-y-0.5">
+                <p>NITIN KHIRWADKAR</p>
                 <p>MADHAV JOSHI</p>
                 <p>ANKUSH HARKARE</p>
-              </div>
-            </div>
-
-            {/* House Keeping Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">House Keeping Committee</h3>
-              <p className="font-semibold mb-1">Head: PRAVIN KATURE</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>NARAYAN GHOGARE</p>
-                <p>PRASHANT NAIK</p>
-                <p>AJAY KATYARMAL</p>
-                <p>SACHIN BUTALE</p>
               </div>
             </div>
 
             {/* Advertisement & Publicity Committee */}
             <div className="bg-white p-4 border-l-4 border-blue-600">
               <h3 className="font-bold text-blue-800 text-lg mb-2">Advertisement & Publicity Committee</h3>
-              <p className="font-semibold mb-1">Head: GOVIND DEHEDKAR</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
+              <p className="font-semibold mb-1">Head:</p>
+              <div className="text-sm space-y-0.5 mb-2">
+                <p>GOVIND DEHEDKAR</p>
                 <p>RAKSHAK DALAL</p>
                 <p>DIPESH JAIN</p>
+              </div>
+              <p className="font-semibold mb-1">Members:</p>
+              <div className="text-sm space-y-0.5">
                 <p>SATISH NIKOSE</p>
                 <p>KHUSHAL MESHRAM</p>
                 <p>ARPIT TABHANE</p>
-              </div>
-            </div>
-
-            {/* Invitation & P.R.O Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Invitation & P.R.O Committee</h3>
-              <div className="text-sm space-y-0.5">
-                <p>GOVIND DEHEDKAR</p>
-                <p>RAVINDRA DESHMUKH</p>
-                <p>ANIL MANAPURE</p>
-                <p>ANAND MAHAJAN</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 3 */}
-          <div className="space-y-6">
-            {/* Registration Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Registration Committee</h3>
-              <p className="font-semibold mb-1">Head: NILKANTH JAISWAL</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>SANJAY AGRAWAL</p>
-                <p>NITIN NAMJOSHI</p>
-                <p>AMIT BADKI</p>
-                <p>SANJAY SAWANKAR</p>
-                <p>RAHUL DHORE</p>
-                <p>OM ULHE</p>
               </div>
             </div>
 
@@ -194,13 +189,16 @@ const Committee = () => {
                 <p>ASHOK PARAD</p>
               </div>
             </div>
+          </div>
 
+          {/* Column 3 */}
+          <div className="space-y-6">
             {/* Souvenir & Diary Committee */}
             <div className="bg-white p-4 border-l-4 border-blue-600">
               <h3 className="font-bold text-blue-800 text-lg mb-2">Souvenir & Diary Committee</h3>
-              <p className="font-semibold mb-1">Head: GOVIND DEHEDKAR</p>
-              <p className="font-semibold mb-1">Members:</p>
+              <p className="font-semibold mb-1">Head:</p>
               <div className="text-sm space-y-0.5 mb-2">
+                <p>GOVIND DEHEDKAR</p>
                 <p>SACHIN SAWALKAR</p>
                 <p>RAKSHAK DALAL</p>
                 <p>PRAFULL MOHOD</p>
@@ -211,6 +209,41 @@ const Committee = () => {
               <div className="text-sm space-y-0.5">
                 <p>PRASHANT GUJAR</p>
                 <p>VIJAY MOURYA</p>
+                <p>RAMESHWAR BAHE</p>
+              </div>
+            </div>
+
+            {/* Press & Publicity Committee */}
+            <div className="bg-white p-4 border-l-4 border-blue-600">
+              <h3 className="font-bold text-blue-800 text-lg mb-2">Press & Publicity Committee</h3>
+              <div className="text-sm space-y-0.5">
+                <p>RAJU BHOYAR</p>
+                <p>SUNIL ULHE</p>
+              </div>
+            </div>
+
+            {/* Account Committee */}
+            <div className="bg-white p-4 border-l-4 border-blue-600">
+              <h3 className="font-bold text-blue-800 text-lg mb-2">Account Committee</h3>
+              <p className="font-semibold mb-1">Head:</p>
+              <div className="text-sm space-y-0.5 mb-2">
+                <p>HEMRAJ PUNEKAR</p>
+                <p>ASHOK PARAD</p>
+              </div>
+              <p className="font-semibold mb-1">Members:</p>
+              <p className="text-sm">RAJESH PANJWANI</p>
+            </div>
+
+            {/* Housekeeping Committee */}
+            <div className="bg-white p-4 border-l-4 border-blue-600">
+              <h3 className="font-bold text-blue-800 text-lg mb-2">Housekeeping Committee</h3>
+              <p className="font-semibold mb-1">Head: PRAVIN KATURE</p>
+              <p className="font-semibold mb-1">Members:</p>
+              <div className="text-sm space-y-0.5">
+                <p>NARAYAN GHOGARE</p>
+                <p>PRASHANT NAIK</p>
+                <p>AJAY KATYARMAL</p>
+                <p>SACHIN BUTALE</p>
               </div>
             </div>
           </div>
