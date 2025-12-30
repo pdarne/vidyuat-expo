@@ -96,17 +96,17 @@ const Home = () => {
             >
               Organised By: {eventData.organizer}
             </p>
-            <p
+            {/* <p
               className="text-sm sm:text-base"
               style={{ color: theme.neutral[600] }}
             >
               In Association With: {eventData.association}
-            </p>
+            </p> */}
             <p
               className="text-xs sm:text-sm"
               style={{ color: theme.neutral[500] }}
             >
-              ({eventData.established})
+              {eventData.established}
             </p>
           </div>
         </div>

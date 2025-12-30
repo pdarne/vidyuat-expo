@@ -37,6 +37,13 @@ export const contactInfo = {
   location: "Nagpur"
 };
 
+export const socialMediaLinks = {
+  facebook: "https://facebook.com/vidyutexpo",
+  instagram: "https://instagram.com/vidyutexpo",
+  youtube: "https://youtube.com/@vidyutexpo",
+  linkedin: "https://linkedin.com/company/vidyutexpo"
+};
+
 export const galleryCategories = [
   "Electrical Infrastructure",
   "Renewable Energy", 
