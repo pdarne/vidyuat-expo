@@ -86,20 +86,21 @@ const About = () => {
           </div>
         </div>
 
-        {/* Organizer Info */}
+       {/* Organizer Info */}
         <div className="text-center bg-gray-100 rounded-lg p-8">
           <h2 className="text-3xl font-bold mb-6" style={{ color: theme.primary[700] }}>
             Organized By
           </h2>
-          <p className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
+          <p className="text-2xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
             {eventData.organizer}
           </p>
-          {/* <p className="text-lg mb-4" style={{ color: theme.neutral[600] }}>
-            In Association With: {eventData.association}
-          </p> */}
-          <p className="text-md" style={{ color: theme.neutral[500] }}>
+          <p className="text-md mb-2" style={{ color: theme.neutral[500] }}>
             {eventData.established}
           </p>
+          <p className="text-sm mb-4" style={{ color: theme.neutral[600] }}>
+            In Association With : {eventData.association}
+          </p>
+          
         </div>
       </div>
       

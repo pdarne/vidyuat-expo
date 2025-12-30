@@ -1,17 +1,32 @@
-const EventHighlight = ({ highlights }) => {
+import React from "react";
+import { theme } from "../theme/colors";
+
+export default function EventHighlight({highlights}) {
   return (
-    <section className="py-12 sm:py-16 px-4 bg-slate-50">
-      <div className="max-w-6xl mx-auto animate-fade-in-up">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-slate-800">
+    <section className="py-8 sm:py-10 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8"
+          style={{ color: theme.primary[700] }}
+        >
           Event Highlights
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="flex flex-wrap justify-center gap-5">
           {highlights.map((highlight, idx) => (
             <div
               key={idx}
-              className="text-center p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-white border border-blue-200"
+              className="text-center p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
+              <div
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center text-white text-lg sm:text-2xl font-bold"
+                style={{ backgroundColor: theme.secondary[500] }}
+              >
+                ⚡
+              </div>
+              <h3
+                className="text-sm sm:text-base lg:text-lg font-semibold"
+                style={{ color: theme.neutral[800], width: 230, minWidth: 200 }}
+              >
                 {highlight}
               </h3>
             </div>
@@ -20,6 +35,4 @@ const EventHighlight = ({ highlights }) => {
       </div>
     </section>
   );
-};
-
-export default EventHighlight;
+}
