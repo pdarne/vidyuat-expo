@@ -54,196 +54,241 @@ const Committee = () => {
       </div>
 
       {/* Advisory Committee */}
-      <div className="max-w-6xl mx-auto px-4 py-8 bg-white">
-        <div className="bg-white p-4 border-l-4 border-blue-600">
-          <h3 className="font-bold text-blue-800 text-lg mb-2">Advisory Committee</h3>
-          <div className="text-sm space-y-0.5">
-            <p>ASHOK KRIPLANI</p>
-            <p>HEMANT DOSHI</p>
-            <p>RAJU HARDAS</p>
-            <p>ASHOK TIJARE</p>
-            <p>RAJA GOYANKA</p>
-            <p>DHARAMSINGH THETTY</p>
-            <p>KRISHNAJI LUTE</p>
-            <p>SANJAY CHOPDE</p>
-            <p>KAILASH ROTKAR</p>
-            <p>BAIJU HARDAS</p>
-            <p>ANIL CHANEKAR</p>
-            <p>PRADEEP DESHMUKH</p>
-            <p>SUBHASH GIRADKAR</p>
-            <p>FATTECHAND AWADHIYA</p>
-            <p>NARENDRA PAHADE</p>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600">
+            <h3 className="font-bold text-blue-800 text-xl mb-4 text-center">Advisory Committee</h3>
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">ASHOK KRIPLANI</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">HEMANT DOSHI</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">RAJU HARDAS</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">ASHOK TIJARE</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">RAJA GOYANKA</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">DHARAMSINGH THETTY</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">KRISHNAJI LUTE</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">SANJAY CHOPDE</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">KAILASH ROTKAR</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">BAIJU HARDAS</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">ANIL CHANEKAR</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">PRADEEP DESHMUKH</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">SUBHASH GIRADKAR</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">FATTECHAND AWADHIYA</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-md text-center">
+                <p className="text-sm font-medium text-slate-700">NARENDRA PAHADE</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
-        <div className="grid md:grid-cols-3 gap-8">
-          
-          {/* Column 1 */}
-          <div className="space-y-6">
-            {/* Venue Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Venue Committee</h3>
-              <p className="font-semibold mb-1">Head: YOGIRAJ SOMKUVAR (BABA)</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>PRASHANT GURJAR</p>
-                <p>RAKSHAK DALAL</p>
-                <p>SANJAY CHORE</p>
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Committee Structure</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* Column 1 */}
+            <div className="space-y-6">
+              {/* Venue Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Venue Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm">Head: YOGIRAJ SOMKUVAR (BABA)</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">PRASHANT GURJAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAKSHAK DALAL</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SANJAY CHORE</p>
+                </div>
+              </div>
+
+              {/* Invitation & P.R.O Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Invitation & P.R.O Committee</h3>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">GOVIND DEHEDKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAVINDRA DESHMUKH</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ANIL MANAPURE</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ANAND MAHAJAN</p>
+                </div>
+              </div>
+
+              {/* Registration Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Registration Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm">Head: NILKANTH JAISWAL</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SANJAY AGRAWAL</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">NITIN NAMJOSHI</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">AMIT BADKI</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SANJAY SAWANKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAHUL DHORE</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">OM ULHE</p>
+                </div>
+              </div>
+
+              {/* Catering Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Catering Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm">Head: ASHOK DHORE</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">DILIP BELSARE</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">T. K. GHOSH</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SHARAD DURUGKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">PRAKASH SOMALKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ASHOK PATIL</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">VISHWANATH KUMBHALKAR</p>
+                </div>
               </div>
             </div>
 
-            {/* Invitation & P.R.O Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Invitation & P.R.O Committee</h3>
-              <div className="text-sm space-y-0.5">
-                <p>GOVIND DEHEDKAR</p>
-                <p>RAVINDRA DESHMUKH</p>
-                <p>ANIL MANAPURE</p>
-                <p>ANAND MAHAJAN</p>
+            {/* Column 2 */}
+            <div className="space-y-6">
+              {/* Transport & Accommodation Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Transport & Accommodation Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm mb-1">Head:</p>
+                  <p className="text-sm text-blue-600">SANJAY CHORE</p>
+                  <p className="text-sm text-blue-600">VIJAY KAREMORE</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SANJIV KHOT</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">MANGESH BANTE</p>
+                </div>
+              </div>
+
+              {/* Technical Seminar Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Technical Seminar Committee</h3>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">NITIN KHIRWADKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">MADHAV JOSHI</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ANKUSH HARKARE</p>
+                </div>
+              </div>
+
+              {/* Advertisement & Publicity Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Advertisement & Publicity Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm mb-1">Head:</p>
+                  <p className="text-sm text-blue-600">GOVIND DEHEDKAR</p>
+                  <p className="text-sm text-blue-600">RAKSHAK DALAL</p>
+                  <p className="text-sm text-blue-600">DIPESH JAIN</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SATISH NIKOSE</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">KHUSHAL MESHRAM</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ARPIT TABHANE</p>
+                </div>
+              </div>
+
+              {/* Permission & Co-ordination Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Permission & Co-ordination Committee</h3>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">PRAFULL KHAPRIKAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">ASHOK PARAD</p>
+                </div>
               </div>
             </div>
 
-            {/* Registration Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Registration Committee</h3>
-              <p className="font-semibold mb-1">Head: NILKANTH JAISWAL</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>SANJAY AGRAWAL</p>
-                <p>NITIN NAMJOSHI</p>
-                <p>AMIT BADKI</p>
-                <p>SANJAY SAWANKAR</p>
-                <p>RAHUL DHORE</p>
-                <p>OM ULHE</p>
+            {/* Column 3 */}
+            <div className="space-y-6">
+              {/* Souvenir & Diary Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Souvenir & Diary Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm mb-1">Head:</p>
+                  <p className="text-sm text-blue-600">GOVIND DEHEDKAR</p>
+                  <p className="text-sm text-blue-600">SACHIN SAWALKAR</p>
+                  <p className="text-sm text-blue-600">RAKSHAK DALAL</p>
+                  <p className="text-sm text-blue-600">PRAFULL MOHOD</p>
+                </div>
+                <div className="bg-green-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-green-700 text-sm mb-1">Sub-Head (Printing & Design):</p>
+                  <p className="text-sm text-green-600">JITENDRA CHARDE</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">PRASHANT GUJAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">VIJAY MOURYA</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAMESHWAR BAHE</p>
+                </div>
               </div>
-            </div>
 
-            {/* Catering Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Catering Committee</h3>
-              <p className="font-semibold mb-1">Head: ASHOK DHORE</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>DILIP BELSARE</p>
-                <p>T. K. GHOSH</p>
-                <p>SHARAD DURUGKAR</p>
-                <p>PRAKASH SOMALKAR</p>
-                <p>ASHOK PATIL</p>
-                <p>VISHWANATH KUMBHALKAR</p>
+              {/* Press & Publicity Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Press & Publicity Committee</h3>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAJU BHOYAR</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SUNIL ULHE</p>
+                </div>
               </div>
-            </div>
-          </div>
 
-          {/* Column 2 */}
-          <div className="space-y-6">
-            {/* Transport & Accommodation Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Transport & Accommodation Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>SANJAY CHORE</p>
-                <p>VIJAY KAREMORE</p>
+              {/* Account Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Account Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm mb-1">Head:</p>
+                  <p className="text-sm text-blue-600">HEMRAJ PUNEKAR</p>
+                  <p className="text-sm text-blue-600">ASHOK PARAD</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">RAJESH PANJWANI</p>
               </div>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>SANJIV KHOT</p>
-                <p>MANGESH BANTE</p>
-              </div>
-            </div>
 
-            {/* Technical Seminar Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Technical Seminar Committee</h3>
-              <div className="text-sm space-y-0.5">
-                <p>NITIN KHIRWADKAR</p>
-                <p>MADHAV JOSHI</p>
-                <p>ANKUSH HARKARE</p>
-              </div>
-            </div>
-
-            {/* Advertisement & Publicity Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Advertisement & Publicity Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>GOVIND DEHEDKAR</p>
-                <p>RAKSHAK DALAL</p>
-                <p>DIPESH JAIN</p>
-              </div>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>SATISH NIKOSE</p>
-                <p>KHUSHAL MESHRAM</p>
-                <p>ARPIT TABHANE</p>
-              </div>
-            </div>
-
-            {/* Permission & Co-ordination Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Permission & Co-ordination Committee</h3>
-              <div className="text-sm space-y-0.5">
-                <p>PRAFULL KHAPRIKAR</p>
-                <p>ASHOK PARAD</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 3 */}
-          <div className="space-y-6">
-            {/* Souvenir & Diary Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Souvenir & Diary Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>GOVIND DEHEDKAR</p>
-                <p>SACHIN SAWALKAR</p>
-                <p>RAKSHAK DALAL</p>
-                <p>PRAFULL MOHOD</p>
-              </div>
-              <p className="font-semibold mb-1">Sub-Head (Printing & Design):</p>
-              <p className="text-sm mb-2">JITENDRA CHARDE</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>PRASHANT GUJAR</p>
-                <p>VIJAY MOURYA</p>
-                <p>RAMESHWAR BAHE</p>
-              </div>
-            </div>
-
-            {/* Press & Publicity Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Press & Publicity Committee</h3>
-              <div className="text-sm space-y-0.5">
-                <p>RAJU BHOYAR</p>
-                <p>SUNIL ULHE</p>
-              </div>
-            </div>
-
-            {/* Account Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Account Committee</h3>
-              <p className="font-semibold mb-1">Head:</p>
-              <div className="text-sm space-y-0.5 mb-2">
-                <p>HEMRAJ PUNEKAR</p>
-                <p>ASHOK PARAD</p>
-              </div>
-              <p className="font-semibold mb-1">Members:</p>
-              <p className="text-sm">RAJESH PANJWANI</p>
-            </div>
-
-            {/* Housekeeping Committee */}
-            <div className="bg-white p-4 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-800 text-lg mb-2">Housekeeping Committee</h3>
-              <p className="font-semibold mb-1">Head: PRAVIN KATURE</p>
-              <p className="font-semibold mb-1">Members:</p>
-              <div className="text-sm space-y-0.5">
-                <p>NARAYAN GHOGARE</p>
-                <p>PRASHANT NAIK</p>
-                <p>AJAY KATYARMAL</p>
-                <p>SACHIN BUTALE</p>
+              {/* Housekeeping Committee */}
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-800 text-lg mb-3">Housekeeping Committee</h3>
+                <div className="bg-blue-50 p-3 rounded-md mb-3">
+                  <p className="font-semibold text-blue-700 text-sm">Head: PRAVIN KATURE</p>
+                </div>
+                <p className="font-semibold mb-2 text-gray-700 text-sm">Members:</p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">NARAYAN GHOGARE</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">PRASHANT NAIK</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">AJAY KATYARMAL</p>
+                  <p className="text-sm text-gray-600 bg-gray-50 p-2 rounded">SACHIN BUTALE</p>
+                </div>
               </div>
             </div>
           </div>
