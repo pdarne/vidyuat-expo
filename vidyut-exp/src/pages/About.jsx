@@ -94,9 +94,9 @@ const About = () => {
           <p className="text-xl font-semibold mb-2" style={{ color: theme.neutral[800] }}>
             {eventData.organizer}
           </p>
-          <p className="text-lg mb-4" style={{ color: theme.neutral[600] }}>
+          {/* <p className="text-lg mb-4" style={{ color: theme.neutral[600] }}>
             In Association With: {eventData.association}
-          </p>
+          </p> */}
           <p className="text-md" style={{ color: theme.neutral[500] }}>
             {eventData.established}
           </p>
