@@ -11,17 +11,41 @@ const Committee = () => {
             VIDYUT EXPO 2026 – Organising Committee
           </h1>
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-md">
+                <img 
+                  src="/photo/deva_dhore.jpg" 
+                  alt="Mr. DEVA DHORE"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h3 className="font-bold text-lg mb-2 text-slate-700">Convener:</h3>
-              <p className="text-base text-slate-600">Mr. DEVA DHORE – 9823122306</p>
+              <p className="text-base font-semibold text-slate-800">Mr. DEVA DHORE</p>
+              <p className="text-sm text-slate-600">📞 9823122306</p>
             </div>
-            <div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-md">
+                <img 
+                  src="/photo/ramesh_konojiya.jpg" 
+                  alt="Mr. RAMESH KANOJIA"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h3 className="font-bold text-lg mb-2 text-slate-700">Co-Convener:</h3>
-              <p className="text-base text-slate-600">Mr. RAMESH KANOJIA – 7507771111</p>
+              <p className="text-base font-semibold text-slate-800">Mr. RAMESH KANOJIA</p>
+              <p className="text-sm text-slate-600">📞 7507771111</p>
             </div>
-            <div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-md">
+                <img 
+                  src="/photo/Avinash_Khaiwale.jpg" 
+                  alt="Mr. AVINASH KHAIWALE"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h3 className="font-bold text-lg mb-2 text-slate-700">Co-Convener:</h3>
-              <p className="text-base text-slate-600">Mr. AVINASH KHAIWALE – 9423103209</p>
+              <p className="text-base font-semibold text-slate-800">Mr. AVINASH KHAIWALE</p>
+              <p className="text-sm text-slate-600">📞 9423103209</p>
             </div>
           </div>
         </div>

@@ -22,10 +22,10 @@ const Exhibitors = () => {
         {/* All Exhibitors */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.primary[700] }}>
-            All Exhibitors
+            Major Participants
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="flex flex-wrap justify-center gap-5">
             {exhibitors.map((exhibitor, idx) => (
               <ExhibitorCard key={idx} exhibitor={exhibitor} />
             ))}
@@ -35,7 +35,7 @@ const Exhibitors = () => {
          {/* Major Participants */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.secondary[600] }}>
-            Major Participants
+            Our Exhibitors
           </h2>
           
           <div className="flex flex-wrap justify-center gap-6">

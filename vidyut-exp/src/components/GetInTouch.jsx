@@ -30,7 +30,8 @@ export default function GetInTouch({ contactInfo }) {
           <div className="flex-1 min-w-64 max-w-80 min-h-55 text-center p-6 bg-white rounded-xl shadow-lg">
             <div className="text-4xl mb-4">📍</div>
             <h3 className="text-xl font-semibold mb-3 text-slate-800">Location</h3>
-            <p className="text-slate-600">Nagpur</p>
+            <p className="text-slate-600">   Dr. Vasantrao Deshpande Hall Premises<br/>
+                  Civil Lines, {contactInfo.location}</p>
           </div>
         </div>
       </div>

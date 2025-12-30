@@ -190,7 +190,7 @@ const Home = () => {
       <section className="py-12 sm:py-16 px-4 bg-slate-100">
         <div className="max-w-6xl mx-auto animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 text-slate-800">
-            Our Exhibitors
+            Major Participants
           </h2>
           <div className="flex flex-wrap justify-center gap-5">
             {exhibitors.slice(0, 10).map((exhibitor, idx) => (
@@ -204,7 +204,7 @@ const Home = () => {
       <section className="py-12 sm:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 text-slate-800">
-            Major Participants
+            Our Exhibitors
           </h2>
           <div className="flex flex-wrap justify-center gap-6">
             {majorParticipants.map((participant, idx) => (

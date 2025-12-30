@@ -24,7 +24,7 @@ export const exhibitors = [
   { name: "Havells", logo: "/logos/havells.png" },
   { name: "Bajaj", logo: "/logos/bajaj.png" },
   { name: "L&T – SUFIN", logo: "/logos/L&T.jpeg"},
-   { name: "Polycab",  logo: "/logos/polycab.png"},
+   { name: "Philips",  logo: "/logos/Philips.svg"},
   { name: "Fairdeal Cable", logo: "/logos/Fairdeal_Cable.jpeg"},
   { name: "Tesla Transformers",  logo: "/logos/Tesla.jpeg"},
   { name: "JDS Group", logo: "/logos/jds.jpg"},
