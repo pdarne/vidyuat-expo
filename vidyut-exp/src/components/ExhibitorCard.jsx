@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { theme } from "../theme/colors";
 
 const ExhibitorCard = ({ exhibitor }) => {
@@ -26,4 +24,3 @@ const ExhibitorCard = ({ exhibitor }) => {
 };
 
 export default ExhibitorCard;
->>>>>>> 7417b87 ([UPDATE] : HOME.jsx updated)
