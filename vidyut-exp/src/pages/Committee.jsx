@@ -1,7 +1,7 @@
 import { theme } from '../theme/colors';
 import FloatingCTA from '../components/FloatingCTA';
 import { socialMediaLinks } from '../data/constants';
-import logo from '../assets/logo/logo.jpeg';
+import logo from '../assets/logo/logo.jpg';
 
 const Committee = () => {
   return (

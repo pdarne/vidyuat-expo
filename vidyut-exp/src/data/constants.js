@@ -38,10 +38,11 @@ export const contactInfo = {
 };
 
 export const socialMediaLinks = {
-  facebook: "https://facebook.com/vidyutexpo",
-  instagram: "https://instagram.com/vidyutexpo",
+  facebook: "https://www.facebook.com/profile.php?id=61585164246778",
+  instagram:
+    "https://www.instagram.com/vidyutexpo_nagpur?igsh=c2t5dDgxYzJrYnJt",
   youtube: "https://youtube.com/@vidyutexpo",
-  linkedin: "https://linkedin.com/company/vidyutexpo"
+  linkedin: "https://www.linkedin.com/company/vidyut-expo/",
 };
 
 export const galleryCategories = [

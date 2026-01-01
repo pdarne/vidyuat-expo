@@ -14,7 +14,7 @@ import {
   contactInfo,
   majorParticipants,
 } from "../data/constants";
-import logo from "../assets/logo/logo.jpeg";
+import logo from "../assets/logo/logo.jpg";
 import nitin_gadkari from "../assets/logo/nitin_gadkari.webp";
 import EventHighlight from "../components/EventHighlight";
 import GetInTouch from "../components/GetInTouch";
