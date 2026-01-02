@@ -1,6 +1,6 @@
 import { theme } from "../theme/colors";
 
-const QRCode = ({ url = "https://forms.gle/TTdwwBfPf9JodSRK8", size = 200, className = "" }) => {
+const QRCode = ({ url = "https://events.vidyutexponagpur.com/events/vidyut-expo-2026", size = 200, className = "" }) => {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(url)}`;
 
   return (

@@ -2,7 +2,7 @@ import { theme } from "../theme/colors";
 
 const FloatingCTA = () => {
   const handleRegisterClick = () => {
-    window.open("https://forms.gle/TTdwwBfPf9JodSRK8", "_blank");
+    window.open("https://events.vidyutexponagpur.com/events/vidyut-expo-2026", "_blank");
   };
 
   return (
